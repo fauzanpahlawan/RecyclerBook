@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.bt_add:
                 //add data to last stack
-                this.students.add(new Student("Si X", "x@email.com", "123"));
+                this.students.add(new Student("Si X", "x@email.com", "0899"));
 
                 //refresh adapter data changed
                 this.bookAdapter.notifyDataSetChanged();
