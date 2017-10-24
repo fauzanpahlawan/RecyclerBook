@@ -1,6 +1,6 @@
 package ap.mobile.recyclerbook;
 
-public class Student {
+class Student {
 
     public String name;
     public String email;
