@@ -72,7 +72,6 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.RowHolder> {
             this.tvPhone = (TextView) itemView.findViewById(R.id.tv_phone);
             this.tvEmail = (TextView) itemView.findViewById(R.id.tv_email);
 
-            // jika textView nama di-klik
             this.tvName.setOnClickListener(this);
             this.tvPhone.setOnClickListener(this);
             this.tvEmail.setOnClickListener(this);
