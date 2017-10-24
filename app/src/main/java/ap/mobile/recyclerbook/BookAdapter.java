@@ -68,9 +68,9 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.RowHolder> {
             super(itemView);
             context = itemView.getContext();
 
-            this.tvName = (TextView) itemView.findViewById(R.id.tv_name);
-            this.tvPhone = (TextView) itemView.findViewById(R.id.tv_phone);
-            this.tvEmail = (TextView) itemView.findViewById(R.id.tv_email);
+            this.tvName = itemView.findViewById(R.id.tv_name);
+            this.tvPhone = itemView.findViewById(R.id.tv_phone);
+            this.tvEmail = itemView.findViewById(R.id.tv_email);
 
             this.tvName.setOnClickListener(this);
             this.tvPhone.setOnClickListener(this);
@@ -94,7 +94,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.RowHolder> {
             }
         }
 
-        public void intentName(String name) {
+        void intentName(String name) {
             Uri uri = Uri.parse("http://www.google.com/#q=" + name);
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             if (intent.resolveActivity(context.getPackageManager()) != null) {
@@ -102,7 +102,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.RowHolder> {
             }
         }
 
-        public void intentPhone(String phone) {
+        void intentPhone(String phone) {
             Intent intent = new Intent(Intent.ACTION_DIAL);
             intent.setData(Uri.parse("tel:" + phone));
             if (intent.resolveActivity(context.getPackageManager()) != null) {
@@ -110,7 +110,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.RowHolder> {
             }
         }
 
-        public void intentEmail(String email) {
+        void intentEmail(String email) {
             String mailto = "mailto:" + email;
             Intent intent = new Intent(Intent.ACTION_SENDTO);
             intent.setData(Uri.parse(mailto));
